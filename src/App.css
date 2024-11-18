@@ -36,22 +36,3 @@ button:active {
 .startbtncontainer {
   width: 100%;
 }
-
-.getbtn {
-  font-family: "Press Start 2P";
-  border: 1px solid black;
-  padding: 15px 20px;
-  font-size: 1rem;
-  border-radius: 10px;
-  background-color: hsl(60, 100%, 50%);
-  width: 300px;
-}
-
-.container {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  height: 50vh;
-  align-items: center;
-  gap: 20px;
-}

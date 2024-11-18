@@ -22,7 +22,7 @@ function PokemonApplication() {
     }
   };
 
-  return <div className="container"></div>;
+  return;
 }
 
 export default PokemonApplication;
