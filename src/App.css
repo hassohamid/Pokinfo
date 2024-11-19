@@ -39,16 +39,17 @@ button:active {
 }
 
 .app-container {
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   display: flex;
   justify-content: center;
   align-items: center;
   height: 500px;
   width: 500px;
   margin: auto;
-  box-shadow: 1px 1px 5px 10px white;
+  box-shadow: 0 4px 40px rgba(255, 255, 255, 0.1);
   position: relative;
   animation: fadeIn 0.6s ease-in forwards;
+  border-radius: 30px;
 }
 
 @keyframes fadeIn {
@@ -81,4 +82,88 @@ button:active {
 #pokemons:hover {
   background-color: #32c532;
   transition: 0.6s;
+}
+
+.fetchbtn {
+  width: 50%;
+  position: absolute;
+  bottom: 10px;
+  background-color: rgb(0, 187, 255);
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.fetchbtn:hover {
+  background-color: rgb(0, 149, 204);
+}
+
+.fetch-container {
+  color: white;
+  font-family: "Press Start 2P";
+  text-align: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgb(255, 255, 255);
+}
+
+.fetch-container h1 {
+  font-size: 2rem;
+  text-transform: capitalize;
+  background-color: #ffe100;
+}
+
+.fetch-container img {
+  height: 200px;
+  background-color: white;
+  border-radius: 100%;
+  width: 50%;
+  margin: auto;
+  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.27);
+}
+
+.fetch-container p {
+  background-color: blue;
+}
+
+.fetch-container h2 {
+  background-color: black;
+}
+
+@media screen and (max-width: 480px) {
+  .app-container {
+    height: 100%;
+    width: 90%;
+    padding: 20px;
+    box-shadow: none;
+    border-radius: 15px;
+  }
+
+  #pokemons {
+    width: 80%;
+    height: 40px;
+    font-size: 8px;
+  }
+
+  .fetchbtn {
+    width: 70%;
+    height: 40px;
+    font-size: 10px;
+  }
+
+  .fetch-container img {
+    height: 150px;
+    width: 60%;
+  }
+
+  .fetch-container h1 {
+    font-size: 1.5rem;
+    padding: 5px;
+  }
+
+  .fetch-container p {
+    font-size: 12px;
+    padding: 5px;
+  }
 }

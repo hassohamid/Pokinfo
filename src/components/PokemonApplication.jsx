@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
+import Pokemon from "./Pokemon";
 
 function PokemonApplication() {
   const [pokemonList, setPokemonList] = useState([]);
-  const [selectedPokemon, setSelectedPokemon] = useState("");
+  const [selectedPokemon, setSelectedPokemon] = useState(null);
   const [pokemonData, setPokemonData] = useState(null);
 
   useEffect(() => {
@@ -22,13 +23,33 @@ function PokemonApplication() {
     }
   };
 
+  const handleUserSelection = (e) => {
+    setSelectedPokemon(e.target.value);
+  };
+
   return (
     <div className="app-container">
-      <select name="pokemons" id="pokemons">
-        <option value="" disabled selected>
+      <select
+        onChange={handleUserSelection}
+        value={selectedPokemon}
+        id="pokemons"
+        defaultValue={"title"}
+      >
+        <option value={"title"} disabled>
           --- Select Your Pokémon ---
         </option>
+        {pokemonList.map((pokemon) => (
+          <option key={pokemon.name} value={pokemon.name}>
+            {pokemon.name}
+          </option>
+        ))}
       </select>
+
+      {pokemonData && <Pokemon data={pokemonData} />}
+
+      <button onClick={fetchPokemonData} className="fetchbtn">
+        Catch!
+      </button>
     </div>
   );
 }

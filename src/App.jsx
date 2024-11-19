@@ -1,6 +1,5 @@
 import "./App.css";
 import PokemonApplication from "./components/PokemonApplication";
-import Pokemon from "./components/Pokemon";
 import { useState } from "react";
 
 function App() {
@@ -14,7 +13,7 @@ function App() {
     setTimeout(() => {
       setIsLoading(false);
       setIsVisible(false);
-    }, 2000);
+    }, 1000);
   }
 
   return (
