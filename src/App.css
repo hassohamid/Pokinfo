@@ -50,6 +50,7 @@ button:active {
   position: relative;
   animation: fadeIn 0.6s ease-in forwards;
   border-radius: 30px;
+  margin-top: 100px;
 }
 
 @keyframes fadeIn {
@@ -62,7 +63,7 @@ button:active {
 }
 
 #pokemons {
-  color: rgb(95, 95, 95);
+  color: rgb(30, 30, 30);
   height: 50px;
   width: 300px;
   text-align: center;
@@ -85,7 +86,7 @@ button:active {
 }
 
 .fetchbtn {
-  width: 50%;
+  width: 90%;
   position: absolute;
   bottom: 10px;
   background-color: rgb(0, 187, 255);
@@ -124,46 +125,53 @@ button:active {
 }
 
 .fetch-container p {
-  background-color: blue;
+  background-color: rgb(0, 120, 200);
 }
 
 .fetch-container h2 {
-  background-color: black;
+  background-color: rgb(40, 40, 40);
 }
 
-@media screen and (max-width: 480px) {
-  .app-container {
-    height: 100%;
-    width: 90%;
-    padding: 20px;
-    box-shadow: none;
-    border-radius: 15px;
+/* prompt from GPT to style the arrow in <select> element */
+
+#pokemons {
+  -webkit-appearance: none; /* Hides the default arrow in WebKit browsers */
+  -moz-appearance: none; /* Hides the default arrow in Firefox */
+  appearance: none; /* Standard */
+  background: rgb(4, 255, 0)
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='black' d='M7 10l5 5 5-5z'/%3E%3C/svg%3E")
+    no-repeat right 10px center;
+  background-size: 20px; /* Make the arrow larger */
+  padding-right: 40px; /* Add padding so the text doesn't overlap the arrow */
+}
+
+@media screen and (max-width: 580px) {
+  .logoposition {
+    margin-top: 20px;
+    justify-content: center;
   }
 
-  #pokemons {
-    width: 80%;
-    height: 40px;
-    font-size: 8px;
+  .app-container {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    width: 375px;
+    margin: auto;
+    box-shadow: 0 4px 40px rgba(255, 255, 255, 0.1);
+    position: relative;
+    animation: fadeIn 0.6s ease-in forwards;
+    border-radius: 30px;
+    margin-top: 80px;
   }
 
   .fetchbtn {
-    width: 70%;
-    height: 40px;
-    font-size: 10px;
-  }
-
-  .fetch-container img {
-    height: 150px;
-    width: 60%;
-  }
-
-  .fetch-container h1 {
-    font-size: 1.5rem;
-    padding: 5px;
-  }
-
-  .fetch-container p {
-    font-size: 12px;
-    padding: 5px;
+    width: 90%;
+    position: absolute;
+    bottom: 10px;
+    background-color: rgb(0, 187, 255);
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
 }
