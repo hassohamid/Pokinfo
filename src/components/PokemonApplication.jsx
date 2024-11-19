@@ -22,7 +22,15 @@ function PokemonApplication() {
     }
   };
 
-  return;
+  return (
+    <div className="app-container">
+      <select name="pokemons" id="pokemons">
+        <option value="" disabled selected>
+          --- Select Your Pokémon ---
+        </option>
+      </select>
+    </div>
+  );
 }
 
 export default PokemonApplication;

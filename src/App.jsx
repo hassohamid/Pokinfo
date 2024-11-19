@@ -20,7 +20,7 @@ function App() {
   return (
     <>
       <div className="logoposition">
-        <img src="/infokemon.png" alt="Website Logo" className="h-28" />
+        <img src="/pokinfo.png" alt="Website Logo" className="h-28" />
       </div>
       {isVisible ? (
         <div className="flex flex-col justify-center items-center w-[100vw] h-[70vh]">
