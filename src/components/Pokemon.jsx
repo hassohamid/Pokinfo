@@ -1,7 +1,7 @@
 function Pokemon({ data }) {
   const { name, sprites, types, weight, height } = data;
   const typeList = types.map((type) => type.type.name).join(", ");
-  const imageUrl = sprites.front_default;
+  const imageUrl = sprites.other["showdown"].front_default;
 
   console.log(sprites);
 
