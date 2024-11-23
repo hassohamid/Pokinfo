@@ -50,7 +50,19 @@ button:active {
   position: relative;
   animation: fadeIn 0.6s ease-in forwards;
   border-radius: 30px;
-  margin-top: 100px;
+  margin-top: 50px;
+}
+
+.steps-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.steps-container h1 {
+  background-color: white;
+  font-size: 1.3rem;
+  font-weight: 500;
 }
 
 @keyframes fadeIn {
@@ -74,7 +86,7 @@ button:active {
   position: absolute;
   top: 10px;
   font-family: "Press Start 2P";
-  font-size: 9px;
+  font-size: 11px;
   outline: none;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   cursor: pointer;
@@ -98,6 +110,10 @@ button:active {
   background-color: rgb(0, 149, 204);
 }
 
+.fetchbtn:active {
+  background-color: rgb(0, 176, 240);
+}
+
 .fetch-container {
   color: white;
   font-family: "Press Start 2P";
@@ -118,9 +134,9 @@ button:active {
 .fetch-container img {
   height: 200px;
   background-color: white;
-  border-radius: 100%;
+  /* border-radius: 100%; */
   width: 50%;
-  margin: auto;
+  margin: 10px auto;
   box-shadow: 0 4px 6px rgba(255, 255, 255, 0.27);
 }
 
@@ -150,7 +166,7 @@ button:active {
 @media screen and (max-width: 580px) {
   #pokemons {
     height: 30px;
-    font-size: 8px;
+    font-size: 9px;
   }
 
   .logoposition {
@@ -189,7 +205,7 @@ button:active {
 
   #pokemons {
     width: 200px;
-    font-size: 7px;
+    font-size: 8px;
     width: 80%;
     height: 30px;
   }

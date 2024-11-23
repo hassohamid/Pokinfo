@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Pokemon from "./Pokemon";
+import Steps from "./Steps";
 
 function PokemonApplication() {
   const [pokemonList, setPokemonList] = useState([]);
@@ -31,12 +32,12 @@ function PokemonApplication() {
     <div className="app-container">
       <select
         onChange={handleUserSelection}
-        value={selectedPokemon}
+        // value={selectedPokemon}
         id="pokemons"
         defaultValue={"title"}
       >
         <option value={"title"} disabled>
-          --- Select Your Pokémon ---
+          --- Select Pokémon ---
         </option>
         {pokemonList.map((pokemon) => (
           <option key={pokemon.name} value={pokemon.name}>
@@ -45,7 +46,7 @@ function PokemonApplication() {
         ))}
       </select>
 
-      {pokemonData && <Pokemon data={pokemonData} />}
+      {pokemonData ? <Pokemon data={pokemonData} /> : <Steps />}
 
       <button onClick={fetchPokemonData} className="fetchbtn">
         Catch!
