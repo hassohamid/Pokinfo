@@ -92,6 +92,11 @@ button:active {
   cursor: pointer;
 }
 
+#pokemons option {
+  color: rgb(255, 255, 255);
+  background-color: rgb(30, 30, 30);
+}
+
 #pokemons:hover {
   background-color: #32c532;
   transition: 0.6s;
